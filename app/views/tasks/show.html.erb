@@ -1,0 +1,8 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><input type="checkbox" <%= @checked %> disabled readonly /><%= @completed %></p>
+
+<%= link_to("Edit task", edit_path) %>
+<%= link_to("Back to list", tasks_path) %>
+
+

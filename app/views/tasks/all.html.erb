@@ -1,0 +1,10 @@
+<h1>All tasks</h1>
+
+<% @tasks.each do |task| %>
+  <p><input type="checkbox" <%= task.completed ? "checked='checked'" : "" %> disabled readonly /><%= link_to task.title, task_path(task) %> - <%= link_to task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+      <i class="far fa-trash-alt"></i>
+    <% end %></p>
+<% end %>
+
+<%= link_to("Add a new task", new_path) %>
+
